@@ -118,7 +118,6 @@ namespace Hazel {
 					data.EventCallback(event);
 					break;
 				}
-
 				}
 			});
 
