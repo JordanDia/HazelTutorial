@@ -51,7 +51,7 @@ namespace Hazel {
 				break;
 		}
 
-		HZ_CORE_TRACE("{0}", e);
+		//HZ_CORE_TRACE("{0}", e);
 	}
 
 	void Application::Run()
@@ -63,8 +63,10 @@ namespace Hazel {
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
-	
-			HZ_CORE_TRACE("{0}, {1}", Input::GetMousePosition().first, Input::GetMousePosition().second);
+			
+			auto [x, y] = Input::GetMousePosition();
+
+			//HZ_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
