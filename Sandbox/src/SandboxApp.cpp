@@ -36,6 +36,31 @@ public:
 	}
 };
 
+class TriangleLayer : public Hazel::Layer
+{
+public:
+	TriangleLayer()
+		: Layer("Example")
+	{
+	}
+
+	void OnUpdate()
+	{
+
+	}
+
+	virtual void OnImGuiRender() override
+	{
+
+	}
+
+	void OnEvent()
+	{
+
+	}
+};
+
+
 class Sandbox : public Hazel::Application
 {
 public:
