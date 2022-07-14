@@ -1,10 +1,10 @@
 #include "hzpch.h"
 //#include "WindowsInput.h"
 
-#include "Hazel/Input.h"
+#include "Hazel/Core/Input.h"
 
 #include <GLFW/glfw3.h>
-#include "Hazel/Application.h"
+#include "Hazel/Core/Application.h"
 
 namespace Hazel {
 
