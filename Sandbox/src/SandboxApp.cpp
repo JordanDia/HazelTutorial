@@ -1,4 +1,5 @@
 #include <Hazel.h>
+#include <Hazel/Core/EntryPoint.h>
 
 #include "Platform/OpenGL/OpenGLShader.h"
 
@@ -6,6 +7,8 @@
 
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+
+#include "Sandbox2D.h"
 
 class ExampleLayer : public Hazel::Layer
 {
@@ -15,8 +18,8 @@ public:
 	{
 		// Rendering a triangle
 		
-		m_VertexArray = Hazel::Ref<Hazel::VertexArray>(Hazel::VertexArray::Create());
-		//m_VertexArray.reset(VertexArray::Create());
+		m_VertexArray = Hazel::VertexArray::Create();
+
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, +0.0f, +0.6f, +0.8f, +1.0f, +1.0f,
 			+0.5f, -0.5f, +0.0f, +0.0f, +0.0f, +1.0f, +1.0f,
@@ -245,41 +248,17 @@ private:
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 
-class TriangleLayer : public Hazel::Layer
-{
-public:
-	TriangleLayer()
-		: Layer("Example")
-	{
-	}
-
-	void OnUpdate()
-	{
-
-	}
-
-	virtual void OnImGuiRender() override
-	{
-
-	}
-
-	void OnEvent()
-	{
-
-	}
-};
-
-
 class Sandbox : public Hazel::Application
 {
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
+		// PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
 	}
+
 	~Sandbox()
 	{
-
 	}
 };
 
