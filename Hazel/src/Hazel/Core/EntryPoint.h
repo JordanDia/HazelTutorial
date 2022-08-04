@@ -19,6 +19,8 @@ int main(int argc, char** argv)
 	HZ_PROFILE_BEGIN_SESSION("Shutdown", "HazelProfile-Shutdown.json");
 	delete app;
 	HZ_PROFILE_END_SESSION();
+
+	// test
 }
 
 #endif
