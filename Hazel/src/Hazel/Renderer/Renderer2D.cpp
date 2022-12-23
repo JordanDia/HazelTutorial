@@ -16,7 +16,7 @@ namespace Hazel {
 		glm::vec3 Position;
 		glm::vec4 Color;
 		glm::vec2 TexCoord;
-
+		
 		// TODO: color, texId
 	};
 
@@ -222,5 +222,4 @@ namespace Hazel {
 		s_Data.QuadVertexArray->Bind();
 		RenderCommand::DrawIndexed(s_Data.QuadVertexArray);
 	}
-
 }
