@@ -9,6 +9,8 @@
 
 #include <glad/glad.h>
 
+// Error callback function
+
 namespace Hazel {
 
 	struct QuadVertex
@@ -18,6 +20,7 @@ namespace Hazel {
 		glm::vec2 TexCoord;
 		float TexIndex;
 		float TilingFactor;
+	
 	};
 
 	struct Renderer2DData
@@ -272,7 +275,7 @@ namespace Hazel {
 		const float tilingFactor = 1.0f;
 
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
-			* glm::rotate(glm::mat4(1.0f), glm::radians(rotation), { 0.0f, 0.0f, 1.0f })
+			* glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 0.0f, 1.0f })
 			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
 
 		for (int i = 0; i < 4; i++)
@@ -332,7 +335,7 @@ namespace Hazel {
 		}
 
 		glm::mat4 transform = glm::translate(glm::mat4(1.0f), position)
-			* glm::rotate(glm::mat4(1.0f), glm::radians(rotation), { 0.0f, 0.0f, 1.0f })
+			* glm::rotate(glm::mat4(1.0f), rotation, { 0.0f, 0.0f, 1.0f })
 			* glm::scale(glm::mat4(1.0f), { size.x, size.y, 1.0f });
 
 		for (int i = 0; i < 4; i++)
